@@ -1,0 +1,80 @@
+﻿@model Customer
+
+@{
+    ViewData["title"]="Edit Customer";             
+}   
+
+
+
+             <form asp-action="Edit" asp-controller="Customers">
+                                <p>Sign in today for more expirience.</p>
+                                <input type="hidden" asp-for="Id"/>
+                                 <div class="form-group row"><label class="col-lg-2 col-form-label">First Name:</label>
+
+                                    <div class="col-lg-10"><input input asp-for="FirstName" type="text" placeholder="First Name" class="form-control"> <span class="form-text m-b-none">First Name field is rquired</span>
+                                    </div>
+                                </div>
+                                <div class="form-group row"><label class="col-lg-2 col-form-label">Last Name:</label>
+
+                                    <div class="col-lg-10"><input input asp-for="LastName" type="text" placeholder="Last Name" class="form-control"> <span class="form-text m-b-none">Last Name field is rquired</span>
+                                    </div>
+                                </div>
+                                <div class="form-group row"><label class="col-lg-2 col-form-label">Middle Name:</label>
+
+                                    <div class="col-lg-10"><input input asp-for="MiddleName" type="text" placeholder="Middle Name" class="form-control"> <span class="form-text m-b-none"> Middle Name field is rquired</span>
+                                    </div>
+                                </div>
+                                 <div class="form-group row"><label class="col-lg-2 col-form-label">Gender</label>
+
+                                    <div class="col-lg-10">
+                                    <select input asp-for="gender"  class="form-control">
+                                        <option value="1" selected.male>Male</option>
+                                        <option value="2">Female</option>
+                                    </select> 
+                                    <span span asp-validation-for="gender" class="form-text m-b-none">Gender field is rquired</span>
+                                    </div>
+                                </div>
+                                 <div class="form-group row"><label class="col-lg-2 col-form-label">Marital Status:</label>
+
+                                     <div class="col-lg-10">
+                                    <select input asp-for="MaritalStatus"  class="form-control">
+                                        <option value="1" selected.single>Single</option>
+                                        <option value="2">Married</option>
+                                    </select> 
+                                    <span span asp-validation-for="MaritalStatus" class="form-text m-b-none">MaritalStatus field is rquired</span>
+                                    </div>
+                                </div>
+                                  <div class="form-group row"><label class="col-lg-2 col-form-label">DateOfBirth:</label>
+
+                                    <div class="col-lg-10"><input asp-for="DateOfBirth"  type="date" placeholder="dddd mmmm yyyy" class="form-control"> <span asp-validation-for="DateOfBirth" class="form-text m-b-none">DateOfBirth field is rquired</span>
+                                    </div>
+                                </div>
+                                 <div class="form-group row"><label class="col-lg-2 col-form-label">Country:</label>
+
+                                    <div class="col-lg-10"><input asp-for="Country"  type="text" placeholder="Country" class="form-control"> <span asp-validation-for="Country" class="form-text m-b-none">Country field is rquired</span>
+                                    </div>
+                                </div>
+                                <div class="form-group row"><label class="col-lg-2 col-form-label">State:</label>
+
+                                    <div class="col-lg-10"><input asp-for="State"  type="text" placeholder="State" class="form-control"> <span  asp-validation-for="State"  class="form-text m-b-none">State field is rquired</span>
+                                    </div>
+                                </div>
+                                <div class="form-group row"><label class="col-lg-2 col-form-label">City:</label>
+
+                                    <div class="col-lg-10"><input asp-for="City"  type="text" placeholder="City" class="form-control"> <span asp-validation-for="City" class="form-text m-b-none">This field is rquired</span>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <div class="col-lg-offset-2 col-lg-10">
+                                        <div class="i-checks"><label> <input type="checkbox"> Active </label></div>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <div class="col-lg-offset-2 col-lg-10">
+                                        <button class="btn btn-sm btn-white" type="submit">Save Customer</button>
+                                        <a class="btn btn-sm btn-dark" asp-action="Index" asp-controller="Customers">Cancel</a>
+                                    </div>
+                                </div>
+                            </form>
+            
+               
